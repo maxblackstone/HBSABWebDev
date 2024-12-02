@@ -1,0 +1,253 @@
+:root {
+    --blu1: #00b9f2;
+    --blu2: #002752;
+}
+
+body {
+    margin: 0;
+    width:100vw;
+    overflow-x: hidden;
+}
+
+/* navbar section */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 15px solid var(--blu1); /* add border to bottom of navbar */
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    max-width: 150px;
+}
+
+.navbar-left a, .navbar-right a {
+    color: black; 
+    text-decoration: none; /* remove link color etc */
+    margin: 0 10px;
+    font-family:monospace; /* set font */
+    font-weight: bold; /* make font bolder */
+}
+
+.navbar-center {
+    display: flex;
+    flex-grow: 1; /* take up remaining space in navbar */
+    justify-content: center;
+}
+
+.logo {
+    height: 50px; /* size image */
+    padding-bottom: 5px; /* space between bottom of logo and bottom of navbar */
+}
+
+.navbar-left a:hover, .navbar-right a:hover {
+    color: var(--blu2); /* change to darker blue when hovering */
+    text-shadow: 0 0 5px var(--blu1); /* glow effect */
+}
+
+/* first section - image, quote, booking button */
+
+.first {
+    background-image: url("herveybay.jpg"); /* temp img */
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding: 400px;
+    margin: -10px;
+    width: 650px;
+    position: relative;
+}
+
+.first h2 {
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
+    color: white;
+    /*text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
+    font-size: 48px;
+    border: 5px solid white;
+    cursor: pointer;
+}
+
+.bookbtn {
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
+    background-color: transparent; /* No background */
+    border: 2px solid white; /* White border */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+    font-family: monospace;
+}
+
+.bookbtn:hover {
+    background-color: white; /* Background on hover */
+    color: #333; /* Text color on hover */
+}
+
+/* Overlay Styles */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Centered Content inside the overlay */
+.overlay-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    height: 75%;
+    text-align: center;
+}
+
+/* Show overlay when active */
+.overlay.active {
+    display: flex;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    float: left;
+    padding-left: 10px;
+    font-family: Mohave;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Mohave;
+    left: 0;
+}
+
+.formbtn {
+    width: 98%;
+    padding: 10px;
+    background-color: var(--blu1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formbtn:hover {
+    background-color: #009dce;
+}
+
+.closebtn {
+    position:absolute;
+    top: 11%;
+    left: 9%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: lightgray;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closebtn:before {
+    content: "×"; /* Unicode character for the 'X' */
+    font-size: 24px;
+    color: lightgray;
+}
+
+/* second section */
+
+.second {
+    padding: 50px;
+    padding-top: 20px;
+}
+
+.second p {
+    display: flex;
+    justify-content: center;
+    top: 40%;
+    left: 52%;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.csg {
+    color: var(--blu2);
+}
+
+.pics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 40px; /* Space between images */
+}
+
+.example {
+    width: 100%; /* Full width of the grid cell */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+}
+
+/* footer section */
+
+footer {
+    border-top: 5px solid var(--blu1);
+    font-family: Mohave;
+}
+
+.ftlogo {
+    height: 40px;
+    float: left;;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.footertext {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footertext p {
+    padding: 5px;
+    margin: 0;
+    padding-right: 20px;
+}

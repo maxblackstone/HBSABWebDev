@@ -1,0 +1,287 @@
+:root {
+    --blu1: #00b9f2;
+    --blu2: #002752;
+}
+
+body {
+    margin: 0;
+    width:100vw;
+    overflow-x: hidden;
+}
+
+/* navbar section */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 5px solid var(--blu1); /* add border to bottom of navbar */
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    max-width: 150px;
+}
+
+.navbar-left a, .navbar-right a {
+    color: black; 
+    text-decoration: none; /* remove link color etc */
+    margin: 0 10px;
+    font-family:monospace; /* set font */
+    font-weight: bold; /* make font bolder */
+}
+
+.navbar-center {
+    display: flex;
+    flex-grow: 1; /* take up remaining space in navbar */
+    justify-content: center;
+}
+
+.logo {
+    height: 50px; /* size image */
+    padding-bottom: 5px; /* space between bottom of logo and bottom of navbar */
+}
+
+.navbar-left a:hover, .navbar-right a:hover {
+    color: var(--blu2); /* change to darker blue when hovering */
+    text-shadow: 0 0 5px var(--blu1); /* glow effect */
+}
+
+/* Online Quote */
+
+.onlquotes {
+    background-image: url("hbsunset.jpg");
+    width: 100%;
+    background-size: cover;
+    padding: 20px;
+}
+
+.quotecontainer {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Mohave;
+}
+
+.quotecontainer h2 {
+    text-align: center;
+    color: var(--blu2);
+    font-size: 32px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Mohave;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--blu1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #009dce;
+}
+
+/* contact us */
+
+.staff {
+    display: flex;
+}
+  
+.imageblock {
+    width: 300px; /* Fixed width for the image container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+  
+.imageblock img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--blu2);
+    border-radius: 5px;
+}
+  
+.textblock {
+    flex-grow: 1;  /* This makes the text block take all available space */
+    padding: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+  
+.textblock p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+}
+
+.socialmedia h2 {
+    margin-right: 20px;
+    font-family: Mohave;
+}
+
+.socialmedia img {
+    width: 50px;
+}
+
+/* about section */
+
+.aboutsect {
+    display: flex;
+    height: 100vh;
+}
+
+.textbox {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Horizontal, vertical, blur radius, color */
+    margin: 10px;
+    font-family: Mohave;
+}
+
+.textbox h1 {
+    margin-bottom: 20px;
+    font-size: 48px;
+    color: var(--blu2);
+}
+
+.textbox h2 {
+    margin-bottom: 20px;
+}
+
+.textbox p {
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+}
+
+.rightimg {
+    flex: 1;
+    margin: 10px;
+}
+
+.rightimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* products */
+
+.prodsect h1 {
+    text-align: center;
+    font-family: Mohave;
+    color: white;
+    font-weight: bold; /* Optional: make the text bold */
+    text-shadow: 
+        1px 1px 0 rgba(0, 39, 82, 0.8),  /* Horizontal and vertical shadow, black color */
+        -1px -1px 0 rgba(0, 39, 82, 0.8),
+        1px -1px 0 rgba(0, 39, 82, 0.8),
+        -1px 1px 0 rgba(0, 39, 82, 0.8); /* Multiple shadows to form the outline */
+    font-size: 48px;
+    background-image: url("hbsunset2.jpg");
+    padding: 80px;
+    background-position: 80%;
+    background-size: cover;
+    margin-top: 0;
+    border-bottom: 5px solid var(--blu1); /* add border to bottom of navbar */
+}
+
+.prodtitles {
+    font-family: Mohave;
+    color: var(--blu2);
+    font-size: 32px;
+    padding-left: 40px;
+}
+
+.proddescs {
+    font-family: Mohave;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.gridimg {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 40px; /* Space between images */
+    margin: 0 40px;
+}
+
+.prodimgs {
+    width: 100%; /* Full width of the grid cell */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+}
+
+.space {
+    padding: 20px;
+}
+
+/* footer section */
+
+footer {
+    border-top: 5px solid var(--blu1);
+    font-family: Mohave;
+}
+
+.ftlogo {
+    height: 40px;
+    float: left;;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.footertext {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footertext p {
+    padding: 5px;
+    margin: 0;
+    padding-right: 20px;
+}
